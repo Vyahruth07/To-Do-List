@@ -10,14 +10,17 @@
 
 
     <mat-card-actions>
-      <mat-form-field appearance="fill" *ngIf="task.state !== 'done'">
+      <mat-form-field appearance="fill">
         <mat-label>Progress</mat-label>
-        <mat-select [(value)]="task.state" (selectionChange)="updateTaskState(task.id,$event.value)">
+        
+        <mat-select [(value)]="task.state"  [disabled]="task.state==='done'" (selectionChange)="updateTaskState(task.id,$event.value)">
             <mat-option value="todo">To-Do</mat-option>
             <mat-option value="inprogress">InProgress</mat-option>
             <mat-option value="done">Done</mat-option>
+          
 
         </mat-select>
+      
       </mat-form-field>
       <button mat-icon-button [ngStyle]="getButtonStyle(task.state)" class="status-button">
         <mat-icon></mat-icon>
@@ -25,4 +28,5 @@
     </mat-card-actions>
   </mat-card>
 </div>
+
 

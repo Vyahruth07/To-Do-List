@@ -1,15 +1,16 @@
-import { Component, EventEmitter, inject, output} from '@angular/core';
+import { Component, inject} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatFormField } from '@angular/material/form-field';
 import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { TasksService } from '../tasks.service';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @Component({
   selector: 'app-new-task',
   standalone: true,
-  imports: [MatFormField,FormsModule,MatDialogModule,MatInputModule],
+  imports: [MatFormField,FormsModule,MatDialogModule,MatInputModule,MatButtonModule],
   templateUrl: './new-task.component.html',
   styleUrl: './new-task.component.css'
 })

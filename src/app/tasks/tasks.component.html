@@ -1,6 +1,10 @@
 
 <ul>
 @for(task of selected;track task.id){
+    <li>
     <app-task [task]="task" />
+    </li>
 }
 </ul>
+
+

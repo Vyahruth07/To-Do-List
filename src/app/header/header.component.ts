@@ -11,11 +11,11 @@ import { MatDialog, MatDialogModule} from '@angular/material/dialog';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  addTask=false;
+  
   constructor(public dialog: MatDialog) {}
   openDialog(){
     const dialogRef = this.dialog.open(NewTaskComponent, {
-      width: '300px',
+      width: '400px',
       disableClose: false
     });
     

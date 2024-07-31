@@ -1,19 +1,24 @@
-/* .container{
+
+
+.task-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: relative;
-} */
-
-.task-card{
-  max-width: 50vw;
+  flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 16px;
-  margin-top: 16px;
-  align-items: center;
+  height: 100%;
+  max-width: 100%;
 }
 
-mat-card-actions{
+mat-card {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin: 0.3rem;
+}
+
+mat-card-actions {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,5 +33,10 @@ mat-card-actions{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   border-radius: 50%;
 }
+
+mat-card-title,mat-card-content p:first-of-type{
+  text-align: center;
+}
+
 
 
